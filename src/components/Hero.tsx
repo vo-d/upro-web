@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
@@ -23,7 +24,7 @@ export default function Hero() {
         <div className="mt-12 text-center">
           <h1
             id="hero-heading"
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-tight tracking-tight mb-8 lg:mb-12"
+            className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black leading-tight tracking-tight mb-8 lg:mb-12"
             style={{
               fontFamily: "THE BOLD FONT",
               fontWeight: 900,
@@ -36,13 +37,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p
-            className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed max-w-4xl mx-auto mb-12 lg:mb-20"
-            style={{
-              fontFamily:
-                "Montserrat, -apple-system, Roboto, Helvetica, sans-serif",
-            }}
-          >
+          <p className="text-white font-bold font-sans text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl leading-snug max-w-4xl mx-auto mb-12 lg:mb-20">
             U-Pro Soccer turns your living room into a smart training ground —
             powered by AI, fueled by fun, and designed to keep kids moving and
             improving.
@@ -50,24 +45,28 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
-            className="flex flex-col gap-12 justify-center items-center"
+            className="flex flex-row gap-12 justify-center items-center"
             role="group"
             aria-label="Hero actions"
           >
-            <button
-              className="bg-upro-green text-black font-medium text-xl lg:text-2xl px-8 lg:px-12 py-4 lg:py-6 rounded-3xl hover:bg-opacity-90 transition-all duration-200 min-w-48 focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-[#020d02]"
+            <Button
+              variant="default"
+              size="lg"
+              className="min-w-48"
               type="button"
               aria-describedby="hero-heading"
             >
               Start Free
-            </button>
-            <button
-              className="bg-upro-green text-black font-medium text-xl lg:text-2xl px-8 lg:px-12 py-4 lg:py-6 rounded-3xl hover:bg-opacity-90 transition-all duration-200 min-w-64 focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-[#020d02]"
+            </Button>
+            <Button
+              variant="default"
+              size="lg"
+              className="min-w-64"
               type="button"
               aria-describedby="hero-heading"
             >
               See How It Works
-            </button>
+            </Button>
           </div>
         </div>
 

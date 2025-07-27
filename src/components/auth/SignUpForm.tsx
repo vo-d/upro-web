@@ -13,9 +13,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 export function SignUpForm() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(""); // testing -- connecting to arthur -again
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
   const [firstName, setFirstName] = useState("");

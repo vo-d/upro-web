@@ -21,3 +21,18 @@ export interface CreatePostRequest {
   content: string;
   user_id: string;
 }
+
+export interface Account {
+  id: number;
+  auth_user_id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface UpdateAccountRequest {
+  first_name?: string;
+  last_name?: string;
+}

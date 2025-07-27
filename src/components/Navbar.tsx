@@ -69,85 +69,12 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12">
-            {/* Search functionality */}
-            <div className="relative">
-              <input
-                type="search"
-                placeholder="Search..."
-                className="bg-white/10 text-white placeholder-white/60 px-4 py-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-upro-green focus:border-transparent w-48"
-                aria-label="Search U-Pro Soccer content"
-              />
-            </div>
-
             {/* Primary nav links */}
-            <ul className="flex items-center gap-10" role="menubar">
-              <li role="none">
-                <Link
-                  href="#features"
-                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-                  role="menuitem"
-                >
-                  Features
-                </Link>
-              </li>
-              <li role="none">
-                <Link
-                  href="#pricing"
-                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-                  role="menuitem"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li role="none">
-                <Link
-                  href="#contact"
-                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-                  role="menuitem"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li role="none">
-                <Link
-                  href="#partners"
-                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-                  role="menuitem"
-                >
-                  Partners
-                </Link>
-              </li>
-              <li role="none">
-                <Link
-                  href="#testimonials"
-                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-                  role="menuitem"
-                >
-                  Testimonials
-                </Link>
-              </li>
-              <li role="none">
-                <Link
-                  href="#experts"
-                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
-                  role="menuitem"
-                >
-                  Trusted By Experts
-                </Link>
-              </li>
-            </ul>
+            <ul className="flex items-center gap-10" role="menubar"></ul>
           </div>
 
           {/* Right - secondary actions */}
           <div className="flex items-center gap-4 lg:gap-6">
-            {/* Download app - hidden on mobile */}
-            <Link
-              href="#"
-              className="hidden lg:inline text-white hover:text-[#00FF3C]"
-            >
-              Download app
-            </Link>
-
             {/* Auth Section */}
             {loading ? (
               <div className="w-8 h-8 animate-pulse bg-white/20 rounded-full" />
@@ -293,7 +220,7 @@ export function Navbar() {
                   Features
                 </Link>
                 <Link
-                  href="#pricing"
+                  href="/pricing"
                   className="block text-white hover:text-[#00FF3C] py-2 text-base focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2"
                   role="menuitem"
                 >
@@ -307,7 +234,7 @@ export function Navbar() {
                   Contact
                 </Link>
                 <Link
-                  href="#partners"
+                  href="/partners"
                   className="block text-white hover:text-[#00FF3C] py-2 text-base focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2"
                   role="menuitem"
                 >

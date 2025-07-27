@@ -1,5 +1,11 @@
 import { supabase } from "./supabase";
-import type { Post, UserProfile, CreatePostRequest } from "@/types/api";
+import type {
+  Post,
+  UserProfile,
+  CreatePostRequest,
+  Account,
+  UpdateAccountRequest,
+} from "@/types/api";
 
 // Example API functions that can be used with TanStack Query
 
@@ -67,5 +73,35 @@ export const api = {
     );
     if (!response.ok) throw new Error("Failed to fetch external data");
     return response.json();
+  },
+
+  // Account functions
+  async getAccount(authUserId: string): Promise<Account> {
+    const { data, error } = await supabase
+      .from("accounts")
+      .select("*")
+      .eq("auth_user_id", authUserId)
+      .single();
+
+    if (error) throw error;
+    return data;
+  },
+
+  async updateAccount(
+    authUserId: string,
+    updates: UpdateAccountRequest
+  ): Promise<Account> {
+    const { data, error } = await supabase
+      .from("accounts")
+      .update({
+        ...updates,
+        updated_at: new Date().toISOString(),
+      })
+      .eq("auth_user_id", authUserId)
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data;
   },
 };

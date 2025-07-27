@@ -1,8 +1,12 @@
-import Hero from "@/components/Hero";
+import CallToActionPage from "@/components/CallToActionPage";
 import ElevatorPitchSection from "@/components/ElevatorPitchSection";
+import Hero from "@/components/Hero";
+import HowUProWorks from "@/components/HowUProWorks";
 import { TestimonialSection } from "@/components/TestimonialSection";
 import TrustedByExpertsSection from "@/components/TrustedByExpertsSection";
 import CallToActionPage from "@/components/CallToActionPage";
+import { TrainingPartner } from "@/components/TrainingPartner";
+import { Sponsors } from "@/components/Sponsors";
 
 // Server Component - rendered on the server
 export default function Home() {
@@ -14,9 +18,12 @@ export default function Home() {
       aria-label="U-Pro Soccer homepage"
     >
       <Hero />
+      <HowUProWorks />
       <ElevatorPitchSection />
       <TrustedByExpertsSection />
       <TestimonialSection />
+      <TrainingPartner />
+      <Sponsors />
       <CallToActionPage />
     </main>
   );
